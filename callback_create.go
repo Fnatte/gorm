@@ -26,7 +26,7 @@ func Create(scope *Scope) {
 		var sqls, columns []string
 
 		for _, field := range scope.Fields() {
-			if field.DBName != scope.PrimaryKey() && len(field.SqlTag) > 0 && !field.IsIgnored {
+			if len(field.SqlTag) > 0 && !field.IsIgnored {
 				columns = append(columns, scope.Quote(field.DBName))
 				sqls = append(sqls, scope.AddToVars(field.Value))
 			}
