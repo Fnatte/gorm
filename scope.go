@@ -3,7 +3,7 @@ package gorm
 import (
 	"errors"
 	"fmt"
-	"github.com/jinzhu/gorm/dialect"
+	"github.com/Fnatte/gorm/dialect"
 	"go/ast"
 	"strings"
 	"time"
